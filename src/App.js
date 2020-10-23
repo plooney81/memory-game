@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card'
+
+const deck = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        <h1>Memory Game</h1>
+        <h2>Match Cards to win</h2>
+      </div>
+      <div className="body">
+      <div className="container">
+        {deck.map((card, index)=>{
+          return <Card key={index}/>
+        })}
+      </div>
+      </div>
     </div>
   );
 }
