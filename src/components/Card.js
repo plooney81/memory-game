@@ -12,6 +12,7 @@ class Card extends React.Component{
         };
     }
 
+    // If we make this an arrow function we do not have to worry about rebinding this
     clickHandler = () => {
         this.setState({
             isFlipped: !this.state.isFlipped
