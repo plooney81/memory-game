@@ -6,8 +6,15 @@ class Card extends React.Component{
     render(){
         return(
             <div className="Card">
-                {/* <img src="../public/logo-wrench-white.png" alt="dc logo"/> */}
-                <img src={logo} alt="dc logo"/>
+                <div className="Card_inner">
+                    <div className="Card_front">
+                        ∆
+                    </div>
+                    <div className="Card_back">
+                        {/* <img src="../public/logo-wrench-white.png" alt="dc logo"/> */}
+                        <img src={logo} alt="dc logo"/>
+                    </div>
+                </div>
             </div>
         )
     }
