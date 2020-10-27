@@ -28,7 +28,7 @@ class Card extends React.Component{
             <div className="Card" onClick={this.clickHandler}>
                 <div className={innerClass}>
                     <div className="Card_front">
-                        ∆
+                        {this.props.symbol}
                     </div>
                     <div className="Card_back">
                         {/* <img src="../public/logo-wrench-white.png" alt="dc logo"/> */}
