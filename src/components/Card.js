@@ -3,29 +3,13 @@ import './Card.css'
 import logo from './logo-wrench-white.png'
 
 class Card extends React.Component{
-
-    constructor(props){
-        super(props);
-
-        this.state = {
-            isFlipped: false
-        };
-    }
-
-    // If we make this an arrow function we do not have to worry about rebinding this
-    clickHandler = () => {
-        this.setState({
-            isFlipped: !this.state.isFlipped
-        })
-    }
-
     render(){
         let innerClass = "Card_inner";
-        if(this.state.isFlipped){
+        if(this.props.isFlipped){
             innerClass += ' flipped';
         }
         return(
-            <div className="Card" onClick={this.clickHandler}>
+            <div className="Card" onClick={this.props.pickCard}>
                 <div className={innerClass}>
                     <div className="Card_front">
                         {this.props.symbol}
